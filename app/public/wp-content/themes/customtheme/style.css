@@ -1,0 +1,470 @@
+/*
+Theme Name: Custom Bootstrap Theme
+Author: Amelia Goodson
+Description: A basic theme using the Bootstrap framework.
+Version: 1.0
+Text Domain: Custom Bootstrap Theme
+*/
+
+/*
+ * Globals
+ */
+:root {
+    --lightgrey: #e1e1e1;
+    --burntorange: #ec5223;
+    --darkgrey: #555555;
+    --black: #000000;
+    --midgrey: #8f8f8f;
+    --white: #faf0e6;
+}
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(./assets/Helvetica-Neue-Medium-Extended.ttf) format('truetype'),
+    url(./assets/Helvetica-Neue-Medium-Extended.otf) format('opentype');
+    font-family: 'Lato';
+    src: url(./assets/Lato-Regular.ttf) format(truetype);
+}
+body {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .73px;
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin-top: 0;
+    font-family: "Helvetica Neue", "Lato", Arial, sans-serif;
+    font-weight: 400;
+}
+
+a {
+    color: var(--darkgrey);
+    font-weight: 700;
+}
+a:hover {
+    text-decoration: none;
+}
+.subheading-home {
+    color: var(--darkgrey);
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    font-weight: 700;
+}
+.home-article {
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+/*
+ * Override Bootstrap's default container.
+ */
+.row {
+    margin: 0;
+}
+.container {
+    padding: 0;
+}
+.blog-title-nav {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 2.3rem;
+
+}
+.container-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.recipe-block {
+    width: 100%;
+    padding: 0;
+}
+.article-recipe {
+    max-width: 100%;
+    margin: auto;
+}
+.container-article {
+    align-items: center;
+    max-width: 100%;
+    padding: 20px 12px;
+    background-color: var(--lightgrey);
+}
+.container-archive {
+    border-bottom: 1px solid var(--darkgrey);
+    margin-bottom: 20px;
+}
+.container-archive .media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container-archive-art {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--lightgrey);
+    padding: 20px;
+
+}
+
+
+.container-flex{
+    display: inline-flex;
+}
+
+
+/*
+ * Masthead for nav
+ */
+.menu-top-menu-container ul {
+    margin: 0;
+}
+.blog-masthead {
+    background-color: var(--burntorange);
+    -webkit-box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
+    padding: 10px
+}
+
+/* Nav links */
+.blog-nav-item {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 500;
+    font-size: large;
+    
+}
+.blog-nav-item-a {
+    color: var(--white);
+}
+
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+    color: var(--darkgrey);
+    text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+    color: var(--white);
+}
+
+.blog-nav .active:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    vertical-align: middle;
+    content: " ";
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid;
+    border-left: 5px solid transparent;
+}
+.btn-search {
+    display: none;
+}
+/* Blog name and description */
+
+.header-cta {
+    width: 100%;
+    margin: auto;
+}
+.header-cta p {
+    font-size: 1.5rem;
+}
+.cta-btn a {
+    background-color: var(--burntorange) !important;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    
+}
+
+.blog-title {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--white);
+}
+
+.form-div {
+    display: none;
+}
+.post {
+    margin-bottom: 20px;
+}
+/*
+ * Main column layout
+ */
+
+.blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+/* Pagination */
+.pager {
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.pager>li>a {
+    width: 140px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+/* Recipe page */
+.content-header h3 {
+    font-size: 2rem;
+    letter-spacing: .27px;
+    line-height: 31px;
+    font-weight: 700;
+    color: var(--darkgrey);
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px 0px;
+}
+.subheading-recipe {
+    color: var(--black);
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2.22px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+
+}
+.wp-block-table {
+    background-color: var(--lightgrey);
+    border: solid #ffffff;
+    
+}
+.wp-block-table th {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 0;
+    margin-top: 11px;
+    margin-bottom: 5px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border: solid var(--midgrey);
+    text-align: center;
+
+}
+.wp-block-table td {
+    border: solid var(--midgrey);
+    text-align: center;
+}
+
+.paragraph-recipe {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: .52px;
+    padding-top: 18px;
+    font-weight: 600;
+    width: 100%;
+        
+}
+.directions-container ol li {
+    padding: 0;
+}
+.directions-container, .ingredients-container{
+    padding: 10px 30px;
+}
+
+.ingredients-container {
+    background-color: #ffffff;
+    
+    
+}
+.wp-block-group__inner-container ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+.wp-block-group__inner-container ul li {
+    margin-bottom: 24px;
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    color: var(--darkgrey);
+    line-height: 1.5;
+    color: var(--black);
+
+}
+.recipe-numbered-list {
+    padding-left: 10px;
+}
+.recipe-numbered-list li {
+        margin-bottom: 18px;      
+}
+
+
+/* Recipe posts archive page */
+.container-page {
+    margin: 0px auto 20px auto;
+    background-color: var(--lightgrey);
+    padding: 20px;
+    
+
+}
+.title-archive {
+    font-size: 2rem;
+}
+.title-archive a {
+    color: var(--black);
+    
+}
+
+.content .post .intro {
+    font-size: 0.875rem
+}
+
+.content .post .more-link {
+    font-size: var(--font-small);
+}
+
+.meta {
+    color: var(--midgrey);
+    font-size: var(--font-small);
+}
+
+.meta span {
+    display: inline-block;
+    margin-right: .25em;
+}
+
+.meta span a {
+    color: var(--midgrey);
+}
+
+.meta span.tag {
+    background-color: var(--lightgray);
+    padding: 0 .5em;
+    border-radius: 5px;
+}
+
+.meta span a:hover {
+    color: var(--secondary)
+}
+
+
+
+.meta span:last-child:after {
+    display: none
+}
+textarea {
+    max-width: 100%;
+}
+.latest-posts, .feature-article {
+    margin-top: 20px;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+    padding: 40px;
+    color: #999;
+    text-align: center;
+    background-color: var(--white);
+    border-top: 1px solid var(--lightgrey);
+}
+
+.blog-footer p:last-child {
+    margin-bottom: 0;
+}
+.social-block h3 {
+    margin-bottom: 20px;
+}
+.social-block ul {
+    background-color: var(--black);
+}
+.social-block ul li {
+    padding:5px;
+    font-size: 1.5rem;
+}
+
+.footer-heading {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+@media only screen and (min-width: 576px) {
+    .wp-block-table th {
+        padding: 10px;
+        letter-spacing: 1px;
+        font-size: 11px;
+    }
+    .article-recipe, .container-page, .container-archive-art {
+        width: 90%;
+    }
+    .header-cta {
+        width: 90%;
+    }
+    
+    .container-archive .media {
+        display: block
+    }
+    
+}
+@media only screen and (min-width: 768px) {
+    .wp-block-table th {
+        padding: 20px;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+    .btn-search {
+        display: block;
+        padding: 6px 12px;
+        border-radius: 0.25rem;
+        border: none;
+    }
+    .article-recipe, .container-page, .header-cta, .container-archive-art {
+        width: 80%;
+    }
+    .form-div {
+        display: inline;
+    }
+    
+}
+@media only screen and (min-width: 992px) {
+    .article-recipe, .container-page, .header-cta, .container-archive-art {
+            width: 70%;
+        }
+}
+@media only screen and (min-width: 1200px) {
+    .article-recipe, .container-page, .header-cta, .container-archive-art {
+        width: 60%;
+    }
+}
